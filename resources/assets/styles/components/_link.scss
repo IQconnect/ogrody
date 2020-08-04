@@ -1,0 +1,12 @@
+a,
+.link {
+  color: $primary;
+  font-weight: $medium;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: saturate($primary, 30%);
+    text-decoration: underline;
+  }
+}

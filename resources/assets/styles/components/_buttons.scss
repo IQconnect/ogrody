@@ -1,0 +1,56 @@
+.button {
+  color: $primary;
+  font-size: 1rem;
+  font-family: $font-main;
+  padding: gutter(0.8) gutter(4);
+  font-weight: $regular;
+  display: inline-block;
+  border: 1px solid $primary;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background: $primary;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &--primary {
+    color: $white;
+    background: $primary;
+    border: 0;
+
+    &:hover {
+      background: lighten($primary, 10);
+      color: $white;
+    }
+  }
+
+  &--small {
+    padding: gutter(0.6) gutter(4);
+    border: 0;
+    font-size: 14px;
+    color: $primary;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+
+  &--dark {
+    color: $black;
+    border-color: $black;
+
+    &:hover {
+      color: $white;
+      background-color: $black;
+    }
+  }
+
+  &--center {
+    text-align: center;
+    margin: auto;
+  }
+}

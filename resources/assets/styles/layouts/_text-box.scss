@@ -1,0 +1,44 @@
+.text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // height: gutter(55);
+  padding: gutter(20);
+  position: relative;
+  background-color: $gray-light;
+
+  @include media("<md") {
+    padding: gutter(8) gutter(3) gutter(15);
+
+    br {
+      display: none;
+    }
+  }
+
+  &__text {
+    color: $secondary;
+  }
+
+  &__lcorner {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(-1);
+
+    @include media("<md") {
+      height: gutter(15);
+    }
+  }
+
+  &__rcorner {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 80%;
+    width: auto;
+
+    @include media("<md") {
+      height: gutter(15);
+    }
+  }
+}

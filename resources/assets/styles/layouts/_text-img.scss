@@ -1,0 +1,61 @@
+.text-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: gutter(2.5) 0;
+
+  @include media("<lg") {
+    flex-wrap: wrap;
+  }
+
+  @include media("<md") {
+    padding: 0;
+  }
+
+  &__img {
+    width: 50%;
+    height: gutter(50);
+    overflow: hidden;
+
+    @include media("<lg") {
+      @include cssLock("height", 360, 992, (300, 400));
+
+      width: 100%;
+      padding: gutter(4) gutter(3) 0;
+    }
+  }
+
+  &__photo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    width: 50%;
+    padding: 0 gutter(20);
+    display: block;
+    margin-left: - gutter(5);
+
+    @include media("<lg") {
+      width: 100%;
+      margin: 0;
+      padding: gutter(2) gutter(4);
+    }
+
+    @include media("<md") {
+      padding: 0 gutter(3) gutter(5);
+    }
+  }
+
+  &__title {
+    text-align: left;
+    color: $primary;
+    margin: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}

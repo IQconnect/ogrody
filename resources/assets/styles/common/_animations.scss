@@ -1,0 +1,19 @@
+@keyframes fromleft {
+  from {
+    transform: translateX(-125%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes showImg {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

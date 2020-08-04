@@ -1,0 +1,99 @@
+.gallery {
+  $root: &;
+
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: gutter(2);
+  margin: 0 auto gutter(8);
+  padding: 0;
+
+  &:last-of-type {
+    margin-bottom: gutter(1);
+  }
+
+  @include media("<lg") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media("<md") {
+    grid-template-columns: 1fr;
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: gutter(6);
+    color: $primary;
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: gutter(40);
+    animation: showImg $transition*1.5 cubic-bezier(0.57, 0.34, 0.65, 0.8) both;
+    transform-origin: left;
+    overflow: hidden;
+
+    &:first-of-type {
+      grid-column: 1 / 3;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $black;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 1;
+    }
+
+    svg {
+      @include cssLock("width", 360, 1920, (64, 128));
+      @include center;
+
+      z-index: 10;
+
+      circle {
+        transition: $transition cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        transform-origin: center;
+        fill: rgba($black, 0.15);
+      }
+
+      path {
+        transition: $transition cubic-bezier(0.27, 0.67, 0.43, 0.67);
+      }
+    }
+
+    &:hover {
+      circle {
+        transform: scale(0.9);
+        opacity: 0.2;
+      }
+
+      path {
+        opacity: 0.8;
+      }
+
+      #{$root}__img {
+        opacity: 0.7;
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.99;
+    transition: opacity $transition ease-in;
+    transition: transform 0.6s ease;
+
+    &--video {
+      opacity: 0.9;
+    }
+  }
+}

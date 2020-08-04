@@ -1,0 +1,34 @@
+.flickity-page-dots {
+  bottom: - gutter(2) !important;
+}
+
+.flickity-page-dots .dot {
+  width: 14px !important;
+  height: 14px !important;
+  opacity: 1 !important;
+  background: $white !important;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background-color: $primary !important;
+}
+
+.flickity-button {
+  background: transparent !important;
+
+  svg {
+    fill: $primary;
+
+    &:hover {
+      fill: $white;
+    }
+  }
+}
+
+.flickity-prev-next-button.previous {
+  left: -80px !important;
+}
+
+.flickity-prev-next-button.next {
+  right: -80px !important;
+}
