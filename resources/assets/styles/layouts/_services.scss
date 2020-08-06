@@ -11,31 +11,52 @@
     display: block;
     width: 40%;
 
+    @include media("<1300px") {
+      width: 50%;
+    }
+
+    @include media("<1000px") {
+      width: 60%;
+    }
+
     @include media("<md") {
       width: 100%;
     }
   }
 
   &__lcorner {
+    @include cssLock("width", 770, 1920, (200, 600));
+    @include cssLock("height", 770, 1920, (200, 600));
+
     position: absolute;
     left: 0;
     bottom: 0;
+    object-fit: contain;
+    object-position: bottom left;
 
     @include media("<md") {
       height: gutter(20);
       width: gutter(20);
-      object-fit: contain;
-      object-position: bottom;
     }
   }
 
   &__rcorner {
+    @include cssLock("width", 770, 1920, (200, 600));
+    @include cssLock("height", 770, 1920, (200, 600));
+
     position: absolute;
     right: 0;
     bottom: 0;
-    height: gutter(65);
+    //height: gutter(65);
+    object-fit: contain;
+    object-position: bottom right;
 
     @include media("<md") {
+      height: gutter(35);
+      width: gutter(30);
+    }
+
+    @include media("<630px") {
       display: none;
     }
   }
@@ -65,8 +86,8 @@
   }
 
   &__img {
-    @include cssLock("width", 770, 1920, (400, 700));
-    @include cssLock("height", 770, 1920, (300, 600));
+    @include cssLock("width", 770, 1920, (350, 700));
+    @include cssLock("height", 770, 1920, (250, 600));
 
     //width: gutter(70);
     //height: gutter(60);
@@ -77,7 +98,7 @@
     }
 
     &--circle {
-      @include cssLock("margin-right", 770, 1920, (60, 200));
+      @include cssLock("margin-right", 770, 1920, (0, 200));
       @include cssLock("width", 770, 1920, (300, 650));
       @include cssLock("height", 770, 1920, (300, 650));
 
@@ -88,10 +109,11 @@
       //margin-right: gutter(20);
 
       @include media("<md") {
-        width: gutter(40);
+        width: 100%;
         height: gutter(40);
-        margin: auto;
+        margin-right: auto;
         order: -1;
+        border-radius: 0;
       }
     }
 
@@ -103,10 +125,13 @@
   }
 
   &__content {
-    position: relative;
-    width: calc(100% - 700px);
+    @include cssLock("width", 770, 1920, (350, 800));
+    @include cssLock("padding-left", 770, 1920, (100, 300));
+    @include cssLock("padding-top", 770, 1920, (10, 40));
+    //width: calc(100% - 700px);
     color: $secondary;
-    padding: gutter(4) 0 0 gutter(30);
+    //padding-top: gutter(4);
+    //padding-left: gutter(30);
 
     @include media("<md") {
       width: 100%;
@@ -114,11 +139,12 @@
     }
 
     &--rev {
-      @include cssLock("width", 770, 1920, (200, 900));
-      @include cssLock("padding-left", 1300, 1920, (0, 300));
+      @include cssLock("width", 770, 1920, (400, 900));
+      @include cssLock("padding-left", 1300, 1920, (150, 300));
+      @include cssLock("padding-top", 1300, 1920, (40, 80));
 
       //width: calc(100% - 900px);
-      padding-top: gutter(8);
+      //padding-top: gutter(8);
       //padding-left: gutter(30);
 
       @include media("<md") {
@@ -130,6 +156,11 @@
     &--text {
       padding: gutter(4) gutter(4) 0;
       width: gutter(45);
+
+      @include media("<1100px") {
+        width: gutter(35);
+        padding: gutter(8) gutter(2) 0;
+      }
 
       @include media("<md") {
         width: 100%;
@@ -147,8 +178,10 @@
   }
 
   &__number {
+    @include cssLock("font-size", 400, 1920, (65, 85));
+
     position: relative;
-    font-size: 85px;
+    //font-size: 85px;
     color: $primary;
     font-weight: $medium;
 
@@ -159,19 +192,22 @@
     }
 
     &::before {
+      @include cssLock("width", 770, 1500, (50, 140));
+      @include cssLock("left", 770, 1500, (-80, -170));
+
       content: "";
       position: absolute;
-      left: -200%;
-      top: 50px;
+      //left: -200%;
+      top: 50%;
       display: block;
       background-color: $primary;
       height: 3px;
-      width: gutter(14);
+      //width: gutter(14);
     }
 
     &--rev {
       &::before {
-        @include cssLock("width", 770, 1920, (200, 360));
+        @include cssLock("width", 770, 1500, (100, 220));
 
         left: 180%;
         //width: gutter(35);

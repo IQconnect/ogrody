@@ -44,12 +44,14 @@
     position: relative;
 
     &::before {
+      @include cssLock("width", 350, 1700, (40, 120));
+
       content: "";
       display: inline-block;
       margin-bottom: gutter(1);
       margin-right: gutter(2);
       background-color: $white;
-      width: gutter(12);
+      //width: gutter(12);
       height: gutter(0.2);
     }
   }
