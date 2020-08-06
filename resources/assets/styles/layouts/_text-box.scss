@@ -1,18 +1,22 @@
 .text-box {
+  @include cssLock("padding", 770, 1920, (100, 200));
+
   display: flex;
   align-items: center;
   justify-content: center;
-  // height: gutter(55);
-  padding: gutter(20);
+  //height: gutter(55);
+  //padding: gutter(20);
   position: relative;
   background-color: $gray-light;
 
-  @include media("<md") {
-    padding: gutter(8) gutter(3) gutter(15);
-
+  @include media ("<1500px") {
     br {
       display: none;
     }
+  }
+
+  @include media("<md") {
+    padding: gutter(8) gutter(3) gutter(15);
   }
 
   &__text {
@@ -20,10 +24,13 @@
   }
 
   &__lcorner {
+    @include cssLock("height", 770, 1920, (200, 400));
+
     position: absolute;
     left: 0;
     bottom: 0;
     transform: scaleX(-1);
+    width: auto;
 
     @include media("<md") {
       height: gutter(15);
@@ -31,10 +38,12 @@
   }
 
   &__rcorner {
+    @include cssLock("height", 770, 1920, (200, 400));
+
     position: absolute;
     right: 0;
     bottom: 0;
-    height: 80%;
+    //height: 80%;
     width: auto;
 
     @include media("<md") {

@@ -17,7 +17,7 @@
 
   &__content {
     position: absolute;
-    top: gutter(45);
+    bottom: - gutter(8);
     color: $white;
     background-color: $secondary;
     padding: gutter(7);
@@ -26,9 +26,11 @@
     z-index: 500;
 
     @include media("<md") {
+      @include cssLock("top", 400, 700, (400, 500));
+
       width: 100%;
       left: 0;
-      top: gutter(50);
+      //top: gutter(50);
       padding: gutter(4) gutter(3);
     }
   }

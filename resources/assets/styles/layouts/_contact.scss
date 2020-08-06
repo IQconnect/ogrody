@@ -24,11 +24,15 @@
   &__content {
     z-index: 800;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 21px;
     line-height: 35px;
+
+    @include media("<md") {
+      flex-direction: column;
+    }
   }
 
   &__info {
@@ -62,6 +66,10 @@
   &__form {
     @include media("<md") {
       width: 100%;
+
+      form {
+        margin: auto;
+      }
     }
   }
 }

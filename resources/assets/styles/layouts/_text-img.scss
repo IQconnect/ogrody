@@ -3,14 +3,10 @@
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  padding: gutter(2.5) 0;
+  padding: 0;
 
   @include media("<lg") {
     flex-wrap: wrap;
-  }
-
-  @include media("<md") {
-    padding: 0;
   }
 
   &__img {
@@ -33,8 +29,11 @@
   }
 
   &__content {
+    @include cssLock("padding-left", 770, 1500, (20, 180));
+    @include cssLock("padding-right", 770, 1500, (20, 180));
+
     width: 50%;
-    padding: 0 gutter(20);
+    //padding: 0 gutter(20);
     display: block;
     margin-left: - gutter(5);
 
@@ -45,7 +44,7 @@
     }
 
     @include media("<md") {
-      padding: 0 gutter(3) gutter(5);
+      padding: gutter(1) gutter(3) gutter(2);
     }
   }
 

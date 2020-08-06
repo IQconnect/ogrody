@@ -77,8 +77,16 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    //justify-content: center;
     margin-top: gutter(10);
+
+    @include media("<md") {
+      text-align: center;
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        margin-top: gutter(4);
+      }
+    }
 
     &--text {
       justify-content: center;
@@ -229,6 +237,10 @@
     display: block;
     max-width: gutter(48);
     margin-top: gutter(4);
+
+    @include media("<md") {
+      margin: auto;
+    }
 
     &--small {
       max-width: gutter(40);
