@@ -30,9 +30,11 @@
   }
 
   &__content {
+    @include cssLock("padding-right", 770, 1600, (50, 180));
+
     width: 40%;
     text-align: left;
-    padding-right: gutter(18);
+    //padding-right: gutter(18);
 
     @include media("<md") {
       width: 100%;
@@ -45,7 +47,7 @@
   }
 
   &__images {
-    width: 60%;
+    width: 55%;
 
     @include media("<md") {
       width: 100%;
