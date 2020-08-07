@@ -6,7 +6,11 @@
 
 .content-page {
   max-width: gutter(110);
-  margin: gutter(5) auto;
+  margin: gutter(8) auto;
+
+  @include media("<lg") {
+    margin: gutter(5) auto;
+  }
 
   .has-medium-font-size {
     margin-top: gutter(3);

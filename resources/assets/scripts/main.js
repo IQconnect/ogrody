@@ -16,6 +16,7 @@ import header from './components/header';
 import menu from './components/menu';
 import preloader from './components/preloader';
 import realizations from './components/realizations';
+import wp_block_gallery from './components/wp-block-gallery';
 
 
 /** Populate Router instance with DOM routes */
@@ -36,6 +37,7 @@ jQuery(document).ready(() => {
   preloader.init();
   hamburger.init();
   realizations.init();
+  wp_block_gallery.init();
   AOS.init({
     disable: function() {
       var maxWidth = 1200;
