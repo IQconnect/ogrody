@@ -1,6 +1,6 @@
 <section class="realizations" style="background: url({{ $data['bg']['url'] }}); background-attachment: fixed; background-position: center; background-size: cover;">
   <div class="container realizations__row">
-    <div class="realizations__content">
+    <div class="realizations__content" data-aos="fade-in" data-aos-duration="2000">
       <h2 class="title realizations__title">
         {{ $data['title'] }}
       </h2>

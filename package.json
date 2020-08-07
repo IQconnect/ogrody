@@ -78,6 +78,7 @@
   },
   "dependencies": {
     "animate.css": "^3.7.0",
+    "aos": "^2.3.4",
     "bootstrap": "v4.2.1",
     "flickity": "^2.2.1",
     "include-media": "^1.4.9",

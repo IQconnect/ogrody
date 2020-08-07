@@ -6,10 +6,10 @@
     </h2>
     <div class="services__list">
       <div class="services__row">
-        <div class="services__img">
+        <div class="services__img" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="300">
           <img src="{{ $data['s1img']['url'] }}" alt="{{ $data['s1img']['title'] }}" />
         </div>
-        <div class="services__content">
+        <div class="services__content" data-aos="fade-right" data-aos-duration="2000">
           <span class="services__number">
             01
           </span>
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="services__row">
-        <div class="services__content services__content--rev">
+        <div class="services__content services__content--rev" data-aos="fade-left" data-aos-duration="2000">
           <span class="services__number services__number--rev">
             02
           </span>
@@ -33,12 +33,12 @@
             {!! $data['s2desc'] !!}
           </p>
         </div>
-        <div class="services__img services__img--circle">
+        <div class="services__img services__img--circle" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="300">
           <img src="{{ $data['s2img']['url'] }}" alt="{{ $data['s2img']['title'] }}" />
         </div>
       </div>
       <div class="services__row services__row--text">
-        <div class="services__content services__content--text services__content--offset">
+        <div class="services__content services__content--text services__content--offset" data-aos="fade-up" data-aos-duration="1000">
           <span class="services__number services__number--noline">
             03
           </span>
@@ -49,7 +49,7 @@
             {!! $data['s3desc'] !!}
           </p>
         </div>
-        <div class="services__content services__content--text">
+        <div class="services__content services__content--text" data-aos="fade-up" data-aos-duration="2200">
           <span class="services__number services__number--noline">
             04
           </span>

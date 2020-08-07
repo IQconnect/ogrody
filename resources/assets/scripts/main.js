@@ -1,12 +1,14 @@
 // Import everything from autoload
 import './autoload/**/*';
 
+// Import library
+import AOS from 'aos';
+
 // import local dependencies
 import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
-
 
 //import header from './components/header';
 import hamburger from './components/hamburger';
@@ -34,5 +36,11 @@ jQuery(document).ready(() => {
   preloader.init();
   hamburger.init();
   realizations.init();
+  AOS.init({
+    disable: function() {
+      var maxWidth = 1200;
+      return window.innerWidth < maxWidth;
+    },
+  });
 });
 

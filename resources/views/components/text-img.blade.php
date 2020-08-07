@@ -1,6 +1,6 @@
 <section class="section">
   <div class="container text-img">
-    <div class="text-img__content">
+    <div class="text-img__content" data-aos="fade-left" data-aos-duration="1500">
       <div>
         @if($data['header'] == 'tak')
           <h2 class="title title--section text-img__title">
