@@ -15,6 +15,7 @@ $realizations
     ->addText('title', ['label' => 'Tytuł'])
     ->addTextarea('desc', ['rows' => 4, 'new_lines' => 'br', 'label' => 'Tekst'])
     ->addImage('bg',['label' => 'Tło'])
+    ->addLink('link', ['label' => 'Link'])
     ->addRepeater('realizations', ['label' => 'Realizacje'])
         ->addImage('image',['label' => 'Zdjęcie', 'wrapper' => ['width' => '80%']]);
 

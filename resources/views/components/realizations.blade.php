@@ -13,7 +13,9 @@
         @foreach ($data['realizations'] as $item)
           <div class="realizations__item carousel-cell">
             <div class="realizations__image">
-              <img src="{{ $item['image']['url'] }}" alt="{{ $item['title'] }}" />
+              <a href="{{ $data['link']['url'] }}">
+                <img src="{{ $item['image']['url'] }}" alt="{{ $item['title'] }}" />
+              </a>
             </div>
           </div>
         @endforeach

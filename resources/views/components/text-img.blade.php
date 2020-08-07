@@ -10,9 +10,11 @@
         <div class="text">
           {!! $data['content'] !!}
         </div>
-        <a href="#" class="button">
-          Więcej
-        </a>
+        @if($data['link'])
+          <a class="button " href="{{ $data['link']['url'] }}">
+            {{ $data['link']['title'] }}
+          </a>
+        @endif
       </div>
     </div>
     <div class="text-img__img">

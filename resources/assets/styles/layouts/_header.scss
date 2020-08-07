@@ -72,13 +72,17 @@
 
   &__icon {
     color: $primary;
-    font-size: gutter(4.7);
+    font-size: gutter(4.5);
     margin-right: gutter(2);
     display: block;
     text-decoration: none;
 
+    @include media("<lg") {
+      font-size: gutter(4);
+    }
+
     &:hover {
-      color: $primary;
+      color: lighten($primary, 15);
       text-decoration: none;
     }
   }
